@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Home Page</h1>
+    {% if user.is_authenticated %}
+        <p>You're logged in as {{ user.email }}.</p>
+        <p>First Name: {{ user.first_name }}</p>
+        <p>Last Name: {{ user.last_name }}</p>
+    {% else %}
+        <p>Welcome to My App. Please log in to continue.</p>
+    {% endif %}
+{% endblock %}
